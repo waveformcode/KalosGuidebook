@@ -1,0 +1,983 @@
+/* ========== GLOBAL RESET ========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* ========== BODY ========== */
+body{
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.54);
+    font-family: "Tinos", serif;
+    
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .hidden-link {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+  
+  nav li {
+    padding: 20px;
+    justify-content: space-around;
+  }
+  
+  nav li a {
+    text-decoration: none;
+    background-color: #f8f8f5;
+    letter-spacing: 0.09rem;
+    padding: 10px;
+    border-radius: 30px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    color: #2a2ab5;
+  }
+  
+  nav li a:hover {
+    background-color: #2a2ab5;
+    color: #fff;
+  }
+  
+  #logo {
+    max-width: 100px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 20px;
+  }
+
+  .content {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: auto;
+    padding: 20px 20px;
+    display: none;
+    text-decoration: none;
+    background-color: #f8f8f5;
+    font-family: 'Work Sans', sans-serif;
+    z-index: 100;
+  }
+
+  .dropdown-nav:hover .content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ========== WELCOME MESSAGE ========== */
+  .container0 {
+    margin-top: 30px;
+  }
+  
+  .welcome-message {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: normal;
+      max-width: 600px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px 20px;
+      border-radius: 30px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+   } 
+  
+   .welcome-p {
+    font-size: 20px;
+    max-width: 700px;
+    text-align: center;
+    border-radius: 40px;
+    line-height: 1.6;
+    letter-spacing: 0.07rem;
+  }
+  
+  .welcome-p-mobile {
+    display: none;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+   /* ========== INTRO ========== */
+  .intro {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-color: #fffdf7;
+    background-repeat: repeat;
+    box-shadow: 1px 1px 3px rgba(0, 0, 1, 0.3);
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.text-mobile {
+  display: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  /* ========== CONTAINERS ========== */
+  .container, 
+  .container1, 
+  .container2 {
+      max-width: 800px;
+      padding: 2rem 1rem;
+      margin: 0 auto;
+      border-radius: 30px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  }
+  
+   .container1 {
+      display:flex;
+      justify-content: space-between;
+   }
+
+   .container2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+   .container-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    place-items: center;
+    gap: 30px;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* ========== WELLNESS ========== */
+.wellness-wrap {
+  background-image: url('images/background/wellness.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wellness-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.wellness {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0, 0.2);
+  letter-spacing: 0.05rem;
+  font-size: 1.1rem;
+  font-family: 'Work Sans', sans-serif;
+  padding: 90px 90px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 500px;
+  color: hsl(0, 0%, 100%);
+}
+
+.list li i {
+  color: hsl(0, 0%, 100%)!important;
+  padding-right: 20px;
+}
+
+.fa-hands {
+  height: 45px;
+  transform: translateX(60px);
+}
+
+.wellness li {
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.wellness li i {
+  color: #6b705c;
+}
+
+.first-p, .last-p {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 8px 20px rgba(0,0,0,1);
+  padding: 20px 20px ;
+  border-radius: 30px; 
+}
+
+.first-p {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.last-p {
+  margin-top: 30px;
+}
+
+.wellness h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: hsl(0, 27%, 98%);
+}
+
+.wellness li:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.foot-well {
+  margin-top: 0 !important;
+}
+
+/* ========== SECTIONS ========== */
+   .check-in-out li,
+   .emergency-contacts li,
+   .house-rules li,
+   .rec li,
+   .transports li,
+   .contact li {
+    list-style-type: none;
+  }
+
+   iframe{
+      width: 300px;
+      height: 250px;
+      border-radius: 15px;
+   }
+  
+
+  .check-in-out {
+    margin-top: 50px;
+  }
+  
+   /* Location */
+   
+  .location {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  /* Transports */
+  .contact {
+    margin-top: 40px;
+  }
+   /* Transports */
+.transports a,
+.emergency-contacts a {
+  color: #5a5aff;
+  font-weight: 400;
+}
+
+
+.transports a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.transports a:hover {
+  transform: scale(1.1);
+}
+
+  
+  /* Middle Right */
+  /* Recommedations */
+  .rec {
+    padding-top: 35px;
+    font-size: 1.1rem;
+    letter-spacing: 1.2;
+  }
+
+
+  
+  .rec a ,
+  .contact a{
+    display: inline-block;
+    color: #6678b9;
+    transition: transform 0.3s ease;
+    font-size: 1.1rem;
+    letter-spacing: 0.09rem;
+  }
+  
+  .rec a:hover {
+    transform: scale(1.1);
+  }
+
+  
+  /* ========== DROPDOWN MENU ========== */
+  .dropdown button {
+    display: inline-block;
+    border: none;
+    display: inline-block;
+    color: #6678b9;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    text-decoration: underline;
+    letter-spacing: 0.09rem;
+    cursor: pointer;  
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .content a {
+    text-decoration: none;
+  }
+
+  .dropdown .content {
+    display: none;
+    text-decoration: none;
+  }
+
+  .dropdown:hover .content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+
+  .dropdown a {
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Emergency Contacts */
+  .emergency-contacts {
+      margin-top: 50px;
+  }
+  
+  .emergency-contacts a {
+    display: inline-block;
+    color: #6678b9;
+    transition: transform 0.3s ease;
+  }
+  
+  .emergency-contacts a:hover {
+    transform: scale(1.1);
+  }
+
+  /* ========== CARDS ========== */
+  .activities-card {
+    display: flex;
+     flex-direction: column;
+     box-shadow: 0px 0px 1px rgba(0, 0, 1, 0.5);
+     border-radius: 30px;
+     padding: 20px 20px;
+     margin-top: 30px;
+     width: 100%;
+     max-width: 320px;
+     height: 560px !important;;
+     font-family: 'Work Sans', sans-serif;
+ }
+ 
+ .card {
+     display: flex;
+     flex-direction: column;
+     box-shadow: 0px 0px 1px rgba(0, 0, 1, 0.5);
+     border-radius: 30px;
+     padding: 20px 20px;
+     margin-top: 30px;
+     width: 100%;
+     max-width: 320px;
+     height: 510px;
+     font-family: 'Work Sans', sans-serif;
+ }
+
+ .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: background-color 0.3s, transform 0.2s;
+ }
+ 
+ .card-img {
+   width: 100%;
+   max-width: 280px;
+   height: 250px;
+   border-radius: 30px;
+   object-fit: cover;     
+ }
+ 
+ .card .info{
+     max-width: 280px;
+     height: auto;
+     text-align: center;
+     padding-top: 15px;
+     font-size: 1rem;
+     line-height: 1.3;
+     letter-spacing: 0.05rem;
+     margin-bottom: 20px;
+ }
+
+  .map-link {
+     display: block;
+     text-align: center;
+     text-decoration: none;
+     margin: 0 auto;
+     margin-top: auto;
+     border-radius: 30px;
+     background-color: rgba(225, 232, 229, 0.641);
+     letter-spacing: 0.07rem;
+     font-weight: 450;
+     color: rgb(55, 55, 195);
+     width: 140px;
+     padding: 10px 10px;
+     transition: all 0.3s ease;
+     font-size: 0.9rem;
+     font-family: 'Fredoka', sans-serif;
+ }
+ 
+ .map-link:hover {
+   background-color:rgb(42, 42, 181);
+   color: rgb(255, 252, 252);
+   width: 150px;
+ }
+ 
+ .wiki-link {
+    display: block;
+     text-align: center;
+     text-decoration: none;
+     margin: 0 auto;
+     border-radius: 30px;
+     background-color: rgba(225, 232, 229, 0.641);
+     letter-spacing: 0.07rem;
+     font-weight: 450;
+     color: rgb(55, 55, 195);
+     width: 140px;
+     padding: 10px 10px;
+     transition: all 0.3s ease;
+     font-size: 0.9rem;
+     font-family: 'Fredoka', sans-serif;
+ }
+ 
+ .wiki-link:hover {
+   background-color:rgb(42, 42, 181);
+   color: rgb(255, 252, 252);
+   width: 150px;
+ }
+
+  /* ========== WATER SPORTS ========== */
+ .promo-banner {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: url('images/water-sports/ring.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.promo-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.promo-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.promo-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.promo-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+ /* ========== OFF ROADING ========== */
+ .off-roading {
+  height: 500px;
+}
+ .video{
+  display: flex;
+  width: 100%;
+  height: 250px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.container-wrap .off-roading {
+justify-content: space-between;
+}
+
+  /* ========== TYPOGRAPHY ========== */
+  i{
+      color:rgb(173, 168, 168);
+      width: 10px;
+      margin-right: 20px;
+  }
+  
+  .check-in-out i{
+    padding-right: 20px;
+  }
+
+
+  .whatsapp-icon-top {
+    color: #25D366;
+    font-size: 20px;
+  }
+
+  h1 i{
+    font-size: 18px;
+  }
+  
+  h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #333;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+      font-weight: 400;
+      width: 100%;
+    }
+
+    ul li {
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+      }
+    
+     
+      
+      .guidebook:nth-of-type(even) {
+        background-color: #f9f9f9;
+      }
+
+      /* ========== FOOTER ========== */
+      .foot {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        padding: 20px;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        font-family: 'Montserrat', sans-serif;
+        background-color: #fafafa;
+        margin-top: 30px;
+        }
+  
+      .foot .phone-icon {
+        font-size: 1.3rem;      
+        color: #4a4a4a;       
+        margin-right: 1rem;   
+        vertical-align: middle;
+      }
+    
+      .whatsapp-icon {
+        font-size: 1.3rem;     
+        color: #25D366;        
+        margin-right: 1rem; 
+        vertical-align: middle;
+        padding-left: 9.5px;
+      }
+
+      .footer-contacts .app {
+        display: inline-block;
+        margin-top: 20px;
+        padding-left: 9.5px;
+      }
+      
+     
+      .footer-contacts a {
+        color: #5a5aff;
+        font-weight: 400;
+      }
+
+     .brand-name {
+        display: inline-block;
+        font-weight: 600;
+        color: #333;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      /* ========== MEDIA QUERIES ========== */
+      @media (max-width: 768px) {
+
+     /* ====== NAVIGATION BAR (Mobile) ====== */
+        .nav-bar {
+            flex-direction: column;
+            margin-bottom: 30px;
+            height: 200px;
+            width: 100%;
+          }
+      
+          .nav-bar ul {
+            font-size: 1rem;
+            max-width: 300px;
+            min-height: 60px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            overflow: scroll;
+          }
+
+          .nav-bar li {
+            margin: 0 auto;
+          }
+
+          .dropdown-nav:hover .content {
+            transform: translateX(-150px); 
+            width: 180px;
+          }
+
+          #logo {
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+          }
+
+
+    /* ====== WELCOME SECTION (Mobile) ====== */
+      .welcome-message {
+        display: none;
+      }
+      
+      .welcome-p-mobile {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 20px 20px;
+        width: 80%;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 1, 0.3);
+        font-size: 1.2rem;
+        font-family: 'Work Sans', sans-serif;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+        border-bottom: none;
+          margin-bottom: 1rem;
+          color: #333;
+          border-bottom: 2px solid #e0e0e0;
+          padding-bottom: 0.5rem;
+          font-weight: 550;
+        }
+     
+    /* ====== CONTAINERS (Mobile) ====== */
+      .container1,
+      .container2 {
+        width: 80%;
+        flex-direction: column;
+      }
+
+      .container1 h1{
+        text-align: center;
+      }
+
+
+      .container-wrap {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+      
+      /* ====== CHECK-IN-OUT (Mobile) ====== */
+      .check-in-out {
+        text-align: center;
+          box-shadow: 1px 1px 3px rgba(0, 0, 1, 0.3);
+          border-radius: 20px;
+          padding-top: 20px;
+          padding-bottom: 5px;
+      }
+      
+      .check-in-out li {
+        font-size: 1.1rem;
+      }
+
+     /* ====== CONTACT (Mobile) ====== */
+       .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        flex-direction: center;
+        box-shadow: 1px 1px 3px rgba(0, 0, 1, 0.3);
+        border-radius: 20px;
+        padding: 0 5px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+      
+      .fa-phone {
+        margin-right: 20px!important;
+      }
+
+      .whatsapp-icon-top {
+        margin-right: 10px;
+      }
+
+
+      
+       /* ====== IFRAME MAP (Mobile) ====== */
+      .location {
+        margin-top: 20px;
+      }
+  
+      iframe {
+        width: 100%;
+      }
+      
+    
+      /* ====== RECOMMENDATIONS - EMERGENCY SECTION (Mobile) ====== */
+      .rec, .emergency-contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-direction: center;
+        box-shadow: 1px 1px 3px rgba(0, 0, 1, 0.3);
+        border-radius: 20px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin-top: 30px;
+      }
+
+      .rec li {
+        font-size: 1.1rem;
+      }
+
+      .rec .hidden-link {
+        display: none;
+      }
+      
+      /* ====== TRANSPORTS (Mobile) ====== */
+      .transports {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        flex-direction: center;
+        box-shadow: 1px 1px 3px rgba(0, 0, 1, 0.3);
+        border-radius: 20px;
+        padding: 0 5px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin-top: 30px;
+      }
+
+      .transports li {
+        font-size: 1.1rem;
+      }
+      
+      
+      span{
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      
+
+      /* ====== CARDS (Mobile) ====== */
+      .card {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+      }
+
+      .activities-card {
+        width: 90%;
+        max-height: 500px;
+        margin: 20px auto;
+      }
+    
+      .card-img {
+          height: auto;
+          aspect-ratio: 4 / 3; 
+        }
+  
+      .intro {
+        display: none;
+      }
+  
+      .text-mobile {
+        display: flex;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding: 20px 20px;
+        width: 75%;
+        height: auto;
+        border-radius: 30px;
+        text-align: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 1px 1px 3px rgba(0, 0, 1, 0.3);
+        font-size: 1.1rem;
+        font-family: 'Work Sans', sans-serif;
+      }
+    
+      .info {
+        font-size: 1rem;
+      }
+      
+      .map-link .wiki-link{
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ========== WELLNESS ========== */
+       .wellness {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        flex-direction: center;
+        box-shadow: 1px 1px 3px rgba(0, 0, 1, 0.3);
+        border-radius: 20px;
+        padding: 0 5px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin-top: 30px;
+       }
+
+       .wellness li {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 10px;
+      }
+    
+      .wellness li i {
+        margin-right: 10px;
+        vertical-align: middle;
+        font-size: 15px;
+        margin-top: 5px;
+      }
+
+       /* ====== FOOTER (Mobile) ====== */
+       .foot {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .footer-contacts {
+        order: 1;
+        margin-bottom: 15px;
+      }
+      
+      .footer-social {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        margin-left: 15px;
+        margin-bottom: 19px;
+      }
+
+      .app {
+        margin-left: 3px;
+      }
+      
+      .footer-brand {
+        order: 3;
+        display: flex;
+        justify-content: center;       
+        align-items: center;          
+        text-align: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 765px;
+        margin: 0 auto;
+      }
+    }
