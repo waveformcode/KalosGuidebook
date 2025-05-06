@@ -70,24 +70,51 @@ nav {
     margin: 0 20px;
   }
 
-  .content {
-    position: absolute;
-    display: none;
-    width: 200px;
-    height: auto;
-    padding: 20px 20px;
-    display: none;
-    text-decoration: none;
-    background-color: #f8f8f5;
+  .dropdown-nav details {
+    position: relative;
     font-family: 'Work Sans', sans-serif;
-    z-index: 100;
   }
-
-  .dropdown-nav:hover .content{
+  
+  .dropdown-nav summary {
+    list-style: none;
+    cursor: pointer;
+    background-color: #f8f8f5;
+    color: #2a2ab5;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 500;
+  }
+  
+  .dropdown-nav summary::marker {
+    display: none;
+  }
+  
+  .dropdown-links {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f8f5;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 10;
   }
-
+  
+  .dropdown-links a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #2a2ab5;
+    font-size: 1rem;
+  }
+  
+  .dropdown-links a:hover {
+    background-color: #2a2ab5;
+    color: white;
+    border-radius: 10px;
+  }
+  
   /* ========== WELCOME MESSAGE ========== */
   .container0 {
     margin-top: 30px;
