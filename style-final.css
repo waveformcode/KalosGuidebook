@@ -39,7 +39,6 @@ nav {
     display: flex;
     list-style: none;
     flex-wrap: nowrap;
-    overflow: scroll;
   }
   
   nav li {
@@ -76,6 +75,7 @@ nav {
   }
   
   .dropdown-nav summary {
+    display: inline;
     list-style: none;
     cursor: pointer;
     background-color: #f8f8f5;
@@ -93,6 +93,7 @@ nav {
     display: flex;
     flex-direction: column;
     position: absolute;
+    width:150px; 
     top: 100%;
     left: 0;
     background-color: #f8f8f5;
@@ -113,6 +114,36 @@ nav {
     background-color: #2a2ab5;
     color: white;
     border-radius: 10px;
+  }
+  
+
+    
+
+  .dropdown-body summary {
+    list-style-type: none;
+    color: #6678b9;
+    text-decoration: underline;
+  }
+
+
+  .dropdown-links-body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #f8f8f5;
+    color: #2a2ab5;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  
+  .dropdown-links-body a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #2a2ab5;
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   /* ========== WELCOME MESSAGE ========== */
