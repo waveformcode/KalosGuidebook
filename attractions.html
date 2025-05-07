@@ -15,6 +15,7 @@
         <meta name="keywords" content="Crete, travel, Istron, beaches, activities, guidebook">
         <meta name="author" content="Sonocode / Lunor"> 
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <script src="dropdown.js" defer></script>
 
     </head>
    
@@ -23,24 +24,23 @@
          <!--Navigation Bar-->
          <header>
           <nav class="nav-bar">
-              <img id="logo" src="images/logo/KALOS-LOGO.png"  alt="Kalos Logo">
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="Beaches.html">Beaches</a></li>
-                  
-                 <!--Dropdown-->
-                  <li class="dropdown-nav"><a href="#">Activities</a>
-              
-                  <div class="content">
-                     <a href="off-roading.html">Off Roading</a>
-                     <a href="wellness.html">Wellness</a>
-                     <a href="hiking.html">Hiking</a>
-                 </div>  
-                </li>
-                 <li><a href="attractions.html">Attractions</a></li>
-              </ul>
-          </nav>   
-          </header>
+            <img id="logo" src="images/logo/KALOS-LOGO.png" alt="Kalos Logo">
+            
+            <ul id="navbar-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Beaches.html">Beaches</a></li>
+              <li><a href="#" id="activities-link">Activities</a></li>
+              <li><a href="attractions.html">Attractions</a></li>
+            </ul>
+        
+            <!-- Βάλε το dropdown ΕΔΩ -->
+            <div id="activities-dropdown" class="dropdown-links hidden">
+              <a href="off-roading.html">Off Roading</a>
+              <a href="wellness.html">Wellness</a>
+              <a href="hiking.html">Hiking</a>
+            </div>
+          </nav>
+        </header>
 
         <main>
 
